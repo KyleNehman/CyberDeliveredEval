@@ -2,10 +2,10 @@ buildscript {
 	ext {
 		springBootVersion = '1.4.2.RELEASE'
 	}
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 	}
 }
@@ -13,6 +13,10 @@ buildscript {
 apply plugin: 'groovy'
 apply plugin: 'org.springframework.boot'
 
+jar {
+	baseName = 'gradle-groovy-test'
+	version = '.0.0.1'
+}
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -23,11 +27,6 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
-}
-
-jar {
-	baseName = 'gradle-groovy-test'
-	version = '.0.0.1'
 }
 
 springBoot {
