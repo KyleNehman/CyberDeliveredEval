@@ -14,8 +14,8 @@ apply plugin: 'groovy'
 apply plugin: 'org.springframework.boot'
 
 jar {
-	baseName = 'gradle-groovy-test'
-	version = '.0.0.1'
+	baseName = 'CyberDeliveredEval'
+	version = '.0.0.2'
 }
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
