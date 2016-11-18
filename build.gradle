@@ -30,5 +30,5 @@ dependencies {
 }
 
 springBoot {
-	mainClass = "EvalMain"
+	mainClass = "com.eval.EvalMain"
 }
