@@ -1,23 +1,28 @@
 package com.eval
-import com.eval.InputObj
 /*
- * A simple main class used to try and get the hand of spring-boot, groovy, and gradle
- *
- * Created by Kyle on 11/15/2016.
+ * The main class and REST controller for the evaluation project
  */
-@Controller
+
+@RestController
+@RequestMapping("/")
 class EvalMain {
-   @RequestMapping("/")
-   @ResponseBody
-    public static String textTest() {
-        def iO = new InputObj("dsa", "dasdsa", "U1dBRw==");
 
-        return iO.xorString();
-    }
+    @RequestMapping(method = RequestMethod.POST)
+    public ResponseEntity<OutputObj> update(@RequestBody InputObj obj){
 
-/*
-    static void main(String[] args) {
-        textTest();
+        // defines a new OutputObj to return
+        def returnVal = new OutputObj()
+
+        // old data members from input obj
+        def userUUID = obj.getUserUUID()
+        def taskUUID = obj.getTaskUUID()
+        def postXORStr = obj.xorString()
+
+        // and setting the returnVal obj
+        returnVal.setUserUUID(userUUID)
+        returnVal.setTaskUUID(taskUUID)
+        returnVal.setBase64Str(postXORStr)
+
+        return new ResponseEntity<OutputObj>(returnVal, HttpStatus.OK)
     }
-*/
 }
