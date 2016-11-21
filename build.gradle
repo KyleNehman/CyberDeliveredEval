@@ -10,13 +10,12 @@ buildscript {
 	}
 }
 
-apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'org.springframework.boot'
 
 jar {
 	baseName = 'CyberDeliveredEval'
-	version = '.0.0.2'
+	version = '1.0'
 }
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
