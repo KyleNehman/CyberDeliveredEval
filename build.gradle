@@ -14,8 +14,8 @@ apply plugin: 'groovy'
 apply plugin: 'org.springframework.boot'
 
 jar {
-	baseName = 'gradle-groovy-test'
-	version = '.0.0.1'
+	baseName = 'CyberDeliveredEval'
+	version = '1.0'
 }
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -26,9 +26,10 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter')
+	compile('org.springframework.boot:spring-boot-starter-web')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
 springBoot {
-	mainClass = "EvalMain"
+	mainClass = "com.eval.EvalMain"
 }
