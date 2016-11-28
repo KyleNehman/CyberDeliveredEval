@@ -1,0 +1,7 @@
+A REST server endpoint written in groovy and powered by Spring Boot.
+
+The server takes in a JSON of format {userUUID, taskUUID, base64Str} and outputs a JSON of {userUUID, taskUUID, (encrypted) base64Str}. The encryption used is a simple XOR cypher with the constant 0x66 on each byte.
+
+The service can be started by using the "spring run" command, or by executing the startServer.sh file.
+
+A test script has been provided that uses curl to submit a JSON via POST to the service, and demonstrates the encryption of the base64Str "a31sZQ==" (kyle) to "DR8KAw=="

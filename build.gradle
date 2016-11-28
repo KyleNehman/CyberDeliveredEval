@@ -1,3 +1,4 @@
+
 buildscript {
 	ext {
 		springBootVersion = '1.4.2.RELEASE'
@@ -11,10 +12,11 @@ buildscript {
 }
 
 apply plugin: 'groovy'
+apply plugin: 'application'
 apply plugin: 'org.springframework.boot'
 
 jar {
-	baseName = 'CyberDeliveredEval'
+	baseName = 'SpringBootRest'
 	version = '1.0'
 }
 sourceCompatibility = 1.8
@@ -31,5 +33,5 @@ dependencies {
 }
 
 springBoot {
-	mainClass = "com.eval.EvalMain"
+	mainClass = 'ObjController'
 }
