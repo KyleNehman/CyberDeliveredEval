@@ -5,3 +5,5 @@ The server takes in a JSON of format {userUUID, taskUUID, base64Str} and outputs
 The service can be started by using the "spring run" command, or by executing the startServer.sh file.
 
 A test script has been provided that uses curl to submit a JSON via POST to the service, and demonstrates the encryption of the base64Str "a31sZQ==" (kyle) to "DR8KAw=="
+
+A Java 8 version of this project that allows for the creation of a single jar (as opposed to running the spring script) can be found at: http://github.com/KyleNehman/JavaSpringBootRestEndpoint
